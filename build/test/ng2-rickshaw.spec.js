@@ -11,34 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ng2_rickshaw_1 = require('../lib/ng2-rickshaw');
 var currentChartType;
-var chartTypes = [
-    'lineChart',
-    'discreteBarChart',
-    'pieChart',
-    'scatterChart',
-    'multiBarChart',
-    'multiBarHorizontalChart',
-    'candlestickBarChart',
-    'ohlcBarChart',
-    'boxPlotChart',
-    'multiChart',
-    'sunburstChart',
-    'stackedAreaChart',
-    'cumulativeLineChart',
-    'historicalBarChart',
-    'parallelCoordinates',
-    'sparklinePlus',
-    'bulletChart',
-    'linePlusBarWithFocusChart',
-    'forceDirectedGraph'
-];
 var Main = (function () {
     function Main() {
     }
     Main = __decorate([
         core_1.Component({
             selector: 'main',
-            template: "\n    <div>\n      <!--<h1 class=\"type\">{{options.chart.type}}</h1>-->\n      <!--<rickshaw [options]=\"options\" [data]=\"data\"></rickshaw>-->\n    </div>\n  "
+            template: "\n    <div>\n      <!--<rickshaw [options]=\"options\" [data]=\"data\"></rickshaw>-->\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], Main);
@@ -75,24 +54,36 @@ var allOptions = {
         chart: {
             type: 'lineChart',
             height: 450,
-            x: function (d) { return d.x; },
-            y: function (d) { return d.y; }
+            x: function (d) {
+                return d.x;
+            },
+            y: function (d) {
+                return d.y;
+            }
         }
     },
     discreteBarChart: {
         chart: {
             type: 'discreteBarChart',
             height: 450,
-            x: function (d) { return d.label; },
-            y: function (d) { return d.value; }
+            x: function (d) {
+                return d.label;
+            },
+            y: function (d) {
+                return d.value;
+            }
         }
     },
     pieChart: {
         chart: {
             type: 'pieChart',
             height: 500,
-            x: function (d) { return d.key; },
-            y: function (d) { return d.y; }
+            x: function (d) {
+                return d.key;
+            },
+            y: function (d) {
+                return d.y;
+            }
         }
     },
     scatterChart: {
@@ -112,23 +103,33 @@ var allOptions = {
         chart: {
             type: 'candlestickBarChart',
             height: 450,
-            x: function (d) { return d['date']; },
-            y: function (d) { return d['close']; }
+            x: function (d) {
+                return d['date'];
+            },
+            y: function (d) {
+                return d['close'];
+            }
         }
     },
     ohlcBarChart: {
         chart: {
             type: 'ohlcBarChart',
             height: 450,
-            x: function (d) { return d['date']; },
-            y: function (d) { return d['close']; }
+            x: function (d) {
+                return d['date'];
+            },
+            y: function (d) {
+                return d['close'];
+            }
         }
     },
     boxPlotChart: {
         chart: {
             type: 'boxPlotChart',
             height: 450,
-            x: function (d) { return d.label; }
+            x: function (d) {
+                return d.label;
+            }
         }
     },
     multiChart: {
@@ -147,33 +148,51 @@ var allOptions = {
         chart: {
             type: 'stackedAreaChart',
             height: 450,
-            x: function (d) { return d[0]; },
-            y: function (d) { return d[1]; }
+            x: function (d) {
+                return d[0];
+            },
+            y: function (d) {
+                return d[1];
+            }
         }
     },
     multiBarHorizontalChart: {
         chart: {
             type: 'multiBarHorizontalChart',
             height: 450,
-            x: function (d) { return d.label; },
-            y: function (d) { return d.value; }
+            x: function (d) {
+                return d.label;
+            },
+            y: function (d) {
+                return d.value;
+            }
         }
     },
     cumulativeLineChart: {
         chart: {
             type: 'cumulativeLineChart',
             height: 450,
-            x: function (d) { return d[0]; },
-            y: function (d) { return d[1] / 100; },
-            average: function (d) { return d.mean / 100; }
+            x: function (d) {
+                return d[0];
+            },
+            y: function (d) {
+                return d[1] / 100;
+            },
+            average: function (d) {
+                return d.mean / 100;
+            }
         }
     },
     historicalBarChart: {
         chart: {
             type: 'historicalBarChart',
             height: 450,
-            x: function (d) { return d[0]; },
-            y: function (d) { return d[1] / 100000; }
+            x: function (d) {
+                return d[0];
+            },
+            y: function (d) {
+                return d[1] / 100000;
+            }
         }
     },
     parallelCoordinates: {
@@ -195,7 +214,9 @@ var allOptions = {
         chart: {
             type: 'sparklinePlus',
             height: 450,
-            x: function (d, i) { return i; }
+            x: function (d, i) {
+                return i;
+            }
         }
     },
     bulletChart: {
@@ -209,7 +230,9 @@ var allOptions = {
             type: 'linePlusBarChart',
             height: 500,
             color: ['#2ca02c', 'darkred'],
-            x: function (d, i) { return i; }
+            x: function (d, i) {
+                return i;
+            }
         }
     },
     forceDirectedGraph: {
@@ -256,15 +279,49 @@ var allData = {
     ],
     candlestickBarChart: [{
             values: [
-                { "date": 15854, "open": 165.42, "high": 165.8, "low": 164.34, "close": 165.22, "volume": 160363400, "adjusted": 164.35 },
-                { "date": 15855, "open": 165.35, "high": 166.59, "low": 165.22, "close": 165.83, "volume": 107793800, "adjusted": 164.96 }
-            ] }
+                {
+                    "date": 15854,
+                    "open": 165.42,
+                    "high": 165.8,
+                    "low": 164.34,
+                    "close": 165.22,
+                    "volume": 160363400,
+                    "adjusted": 164.35
+                },
+                {
+                    "date": 15855,
+                    "open": 165.35,
+                    "high": 166.59,
+                    "low": 165.22,
+                    "close": 165.83,
+                    "volume": 107793800,
+                    "adjusted": 164.96
+                }
+            ]
+        }
     ],
     ohlcBarChart: [{
             values: [
-                { "date": 15707, "open": 145.11, "high": 146.15, "low": 144.73, "close": 146.06, "volume": 192059000, "adjusted": 144.65 },
-                { "date": 15708, "open": 145.99, "high": 146.37, "low": 145.34, "close": 145.73, "volume": 144761800, "adjusted": 144.32 },
-            ] }
+                {
+                    "date": 15707,
+                    "open": 145.11,
+                    "high": 146.15,
+                    "low": 144.73,
+                    "close": 146.06,
+                    "volume": 192059000,
+                    "adjusted": 144.65
+                },
+                {
+                    "date": 15708,
+                    "open": 145.99,
+                    "high": 146.37,
+                    "low": 145.34,
+                    "close": 145.73,
+                    "volume": 144761800,
+                    "adjusted": 144.32
+                },
+            ]
+        }
     ],
     boxPlotChart: [
         {

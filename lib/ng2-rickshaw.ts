@@ -1,5 +1,5 @@
 import {NgModule, Component, OnChanges, ElementRef, Input, ViewEncapsulation, HostListener} from '@angular/core';
-declare const Rickshaw: any;
+declare let Rickshaw: any;
 
 @Component({
     selector: 'rickshaw',
