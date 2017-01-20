@@ -1,5 +1,5 @@
+/// <reference path="../typings/globals/rickshaw/index.d.ts" />
 import {NgModule, Component, OnChanges, ElementRef, Input, ViewEncapsulation, HostListener} from '@angular/core';
-declare let Rickshaw: any;
 
 @Component({
     selector: 'rickshaw',
