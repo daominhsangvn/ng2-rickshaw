@@ -16,6 +16,7 @@
     "test/ng2-rickshaw.spec.ts",
     "test/vendor.ts",
     "test/spec.d.ts",
-    "typings/browser.d.ts"
+    "typings/browser.d.ts",
+    "typings/index.d.ts"
   ]
 }

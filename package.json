@@ -26,6 +26,7 @@
     "url": "https://github.com/daominhsangvn/ng2-rickshaw.git"
   },
   "devDependencies": {
+    "@types/d3": "^4.4.1",
     "es6-promise": "^3.0",
     "es6-shim": "^0.35",
     "jasmine-core": "^2.4.1",

@@ -1,0 +1,1 @@
+/// <reference path="globals/rickshaw/index.d.ts" />

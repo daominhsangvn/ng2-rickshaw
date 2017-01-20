@@ -2,7 +2,7 @@
   "ambientDependencies": {
     "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654"
   },
-  "devDependencies": {
-    "d3": "registry:npm/d3#3.0.0+20160723033700"
+  "globalDependencies": {
+    "rickshaw": "registry:dt/rickshaw#0.0.0+20160510002910"
   }
 }
