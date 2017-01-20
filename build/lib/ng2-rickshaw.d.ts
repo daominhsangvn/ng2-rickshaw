@@ -1,3 +1,4 @@
+/// <reference path="../../typings/globals/rickshaw/index.d.ts" />
 import { OnChanges, ElementRef } from '@angular/core';
 export declare class rickshaw implements OnChanges {
     private elementRef;
