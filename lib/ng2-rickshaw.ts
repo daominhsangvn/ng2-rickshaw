@@ -1,6 +1,6 @@
 /// <reference path="../typings/globals/rickshaw/index.d.ts" />
 import {NgModule, Component, OnChanges, ElementRef, Input, ViewEncapsulation, HostListener} from '@angular/core';
-declare const Rickshaw: any;
+import * as Rickshaw from 'rickshaw';
 
 @Component({
     selector: 'rickshaw',
