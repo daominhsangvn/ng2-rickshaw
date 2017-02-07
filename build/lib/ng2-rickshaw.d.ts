@@ -6,8 +6,8 @@ export declare class rickshaw implements OnChanges {
     series: any;
     features: any;
     renderer: any;
-    private el;
-    private graph;
+    el: any;
+    graph: any;
     private settings;
     private mainEl;
     private graphEl;

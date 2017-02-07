@@ -22,8 +22,14 @@ var rickshaw = (function () {
         self.updateConfiguration();
     };
     rickshaw.prototype.redraw = function () {
-        this.graph && this.graph.setSize();
-        this.graph && this.graph.render();
+        if (this.graph) {
+            this.graph.configure({
+                width: this.el.clientWidth,
+                height: this.el.clientHeight
+            });
+            this.graph.setSize();
+            this.graph.render();
+        }
     };
     rickshaw.prototype._splice = function (args) {
         var data = args.data;

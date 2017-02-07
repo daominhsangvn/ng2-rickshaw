@@ -48,13 +48,14 @@ export class rickshaw implements OnChanges {
     }
 
     redraw() {
-        this.graph.configure({
-            width: this.el.clientWidth,
-            height: this.el.clientHeight
-        });
-
-        this.graph && this.graph.setSize();
-        this.graph && this.graph.render();
+        if (this.graph) {
+            this.graph.configure({
+                width: this.el.clientWidth,
+                height: this.el.clientHeight
+            });
+            this.graph.setSize();
+            this.graph.render();
+        }
     }
 
     _splice(args) {
