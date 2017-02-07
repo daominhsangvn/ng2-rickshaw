@@ -1,5 +1,6 @@
 /// <reference path="../typings/globals/rickshaw/index.d.ts" />
 import {NgModule, Component, OnChanges, ElementRef, Input, ViewEncapsulation, HostListener} from '@angular/core';
+declare const Rickshaw: any;
 
 @Component({
     selector: 'rickshaw',
@@ -20,8 +21,8 @@ export class rickshaw implements OnChanges {
     @Input() series: any;
     @Input() features: any;
     @Input() renderer: any;
-    private el: any;
-    private graph: any;
+    public el: any;
+    public graph: any;
     private settings: any;
     private mainEl: any;
     private graphEl: any;
@@ -47,6 +48,11 @@ export class rickshaw implements OnChanges {
     }
 
     redraw() {
+        this.graph.configure({
+            width: this.el.clientWidth,
+            height: this.el.clientHeight
+        });
+
         this.graph && this.graph.setSize();
         this.graph && this.graph.render();
     }
