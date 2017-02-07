@@ -112,6 +112,7 @@ export class Main{
 
 // Main App
 import {NgModule} from '@angular/core';
+import 'd3';
 import 'rickshaw';
 import {RickshawModule} from 'ng2-rickshaw';
 
