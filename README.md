@@ -6,7 +6,7 @@ Angular2 component for rickshaw. It has similar technique as [angular-rickshaw](
 
 Online demos:
 
-Updating...
+https://plnkr.co/edit/sS2shtYxPTF3CfSgnPiC?p=preview
 
 ## Install
 
@@ -22,9 +22,9 @@ Note: `d3` and `rickshaw` should be also included in your project bundle.
 Simple line chart:
     
 ```js
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {rickshaw, Rickshaw} from 'ng2-rickshaw';
-import * as d3 from 'd3';
+import {Component, ViewChild} from '@angular/core';
+declare const Rickshaw: any, d3: any;
+import {rickshaw} from 'ng2-rickshaw';
 
 @Component({
   selector: 'main',
@@ -35,14 +35,15 @@ import * as d3 from 'd3';
           [options]="widget.options"
           [series]="widget.series"
           [features]="widget.features"
+          [renderer]="widget.renderer"
         ></rickshaw>
     </div>
   `
 })
 
-export class Main implements OnInit{
+export class Main{
   @ViewChild('widgetrickshaw') _widgetRickshaw: rickshaw;
-  widget5 = {
+  widget = {
       options: {
         renderer: 'bar'
       },
@@ -107,6 +108,22 @@ export class Main implements OnInit{
         }
       })
     };
+}
+
+// Main App
+import {NgModule} from '@angular/core';
+import 'd3';
+import 'rickshaw';
+import {RickshawModule} from 'ng2-rickshaw';
+
+@NgModule({
+  bootstrap: [Main],
+  imports: [
+    BrowserModule,  
+    RickshawModule
+  ]
+})
+export class AppModule {
 }
 ```    
 
