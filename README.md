@@ -23,8 +23,8 @@ Simple line chart:
     
 ```js
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {rickshaw, Rickshaw} from 'ng2-rickshaw';
-import * as d3 from 'd3';
+declare const Rickshaw: any, d3: any;
+import {rickshaw} from 'ng2-rickshaw';
 
 @Component({
   selector: 'main',
