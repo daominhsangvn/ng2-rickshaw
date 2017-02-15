@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "declaration": true,
+    "sourceMap": false,
+    "outDir": "build"
+  },
+  "files": [
+    "lib/ng2-rickshaw.ts",
+    "test/ng2-rickshaw.spec.ts",
+    "test/vendor.ts",
+    "test/spec.d.ts",
+    "typings/browser.d.ts",
+    "typings/index.d.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "strictMetadataEmit": true
+  }
+}

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var Rickshaw = require('rickshaw');
+import { NgModule, Component, ElementRef, Input, ViewEncapsulation, HostListener } from '@angular/core';
+import * as Rickshaw from 'rickshaw';
 var rickshaw = (function () {
     function rickshaw(elementRef) {
         this.elementRef = elementRef;
@@ -209,57 +208,56 @@ var rickshaw = (function () {
             }
         }
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], rickshaw.prototype, "options", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], rickshaw.prototype, "series", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], rickshaw.prototype, "features", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], rickshaw.prototype, "renderer", void 0);
-    __decorate([
-        core_1.HostListener('window:resize', ['$event']), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [Object]), 
-        __metadata('design:returntype', void 0)
-    ], rickshaw.prototype, "onResize", null);
-    rickshaw = __decorate([
-        core_1.Component({
-            selector: 'rickshaw',
-            template: "",
-            encapsulation: core_1.ViewEncapsulation.None,
-            styles: [
-                "\n      rickshaw {\n        display: block;\n        width: 100%;\n      }\n    "
-            ]
-        }), 
-        __metadata('design:paramtypes', [core_1.ElementRef])
-    ], rickshaw);
     return rickshaw;
 }());
-exports.rickshaw = rickshaw;
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], rickshaw.prototype, "options", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], rickshaw.prototype, "series", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], rickshaw.prototype, "features", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], rickshaw.prototype, "renderer", void 0);
+__decorate([
+    HostListener('window:resize', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], rickshaw.prototype, "onResize", null);
+rickshaw = __decorate([
+    Component({
+        selector: 'rickshaw',
+        template: "",
+        encapsulation: ViewEncapsulation.None,
+        styles: [
+            "\n      rickshaw {\n        display: block;\n        width: 100%;\n      }\n    "
+        ]
+    }),
+    __metadata("design:paramtypes", [ElementRef])
+], rickshaw);
+export { rickshaw };
 var RickshawModule = (function () {
     function RickshawModule() {
     }
-    RickshawModule = __decorate([
-        core_1.NgModule({
-            declarations: [
-                rickshaw
-            ],
-            imports: [],
-            exports: [
-                rickshaw
-            ],
-        }), 
-        __metadata('design:paramtypes', [])
-    ], RickshawModule);
     return RickshawModule;
 }());
-exports.RickshawModule = RickshawModule;
+RickshawModule = __decorate([
+    NgModule({
+        declarations: [
+            rickshaw
+        ],
+        imports: [],
+        exports: [
+            rickshaw
+        ],
+    })
+], RickshawModule);
+export { RickshawModule };
