@@ -44,10 +44,8 @@
     "ts-loader": "^0.8",
     "typescript": "^2.1.6",
     "typings": "^0.8.1",
-    "zone.js": "^0.6.12"
-  },
-  "dependencies": {
-    "@angular/common": "^2.2.1",
+    "zone.js": "^0.6.12",
+	"@angular/common": "^2.2.1",
     "@angular/compiler": "^2.2.1",
     "@angular/compiler-cli": "^2.4.7",
     "@angular/core": "^2.2.1",
@@ -56,5 +54,8 @@
     "@angular/platform-server": "^2.4.7",
     "d3": "^3.5.15",
     "rickshaw": "^1.6.0"
+  },
+  "dependencies": {
+    
   }
 }
